@@ -4,5 +4,5 @@ import core.views
 
 urlpatterns = [
     path('', core.views.index),
-    # path('/<pk:pk>')
+    path('company/<int:pk>', core.views.company),
 ]
