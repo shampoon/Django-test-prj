@@ -10,8 +10,8 @@ def index(request):
 
 
 def company(request, pk):
-    comp = core.models.Company.objects.all().filter(id=pk)
-    return render(request, 'core/company_detail.html', {'objects_list': comp})
+    comp = get_object_or_404(core.models.Company, id=pk)
+    return render(request, 'core/company_detail.html', {'object': comp})
 
 
 def companies(request):

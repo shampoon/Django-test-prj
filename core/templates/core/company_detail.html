@@ -49,15 +49,13 @@
         </tr>
       </thead>
       <tbody>
-      {% for company in objects_list %}
         <tr>
-          <th scope="row">{{ forloop.counter}}</th>
+          <th scope="row">1</th>
           <td>
-            <a href="{% url 'core:company' company.id %}"> {{ company.name }} </a>
+            <a href="{% url 'core:company' object.id %}"> {{ object.name }} </a>
           </td>
-          <td>{{ company.industry|default:'-' }}</td>
+          <td>{{ object.industry|default:'-' }}</td>
         </tr>
-      {% endfor %}
       </tbody>
     </table>
 
