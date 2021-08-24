@@ -11,7 +11,7 @@ def index(request):
 
 def company(request, pk):
     comp = core.models.Company.objects.all().filter(id=pk)
-    return render(request, 'core/company.html', {'objects_list': comp})
+    return render(request, 'core/company_detail.html', {'objects_list': comp})
 
 
 def companies(request):
