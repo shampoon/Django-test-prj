@@ -38,6 +38,15 @@
         </div>
       </div>
     </nav>
+    <form class="row g-3" method="get">
+      <div class="col-auto">
+        <input type="text" class="form-control" placeholder="Название компании" name="name" value="{{ request.GET.name}}">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Поиск</button>
+      </div>
+    </form>
+
 
     <h1>This is companies page!</h1>
     <table class="table">
@@ -49,7 +58,7 @@
         </tr>
       </thead>
       <tbody>
-      {% for company in objects_list %}
+      {% for company in object_list %}
         <tr>
           <th scope="row">{{ forloop.counter}}</th>
           <td>
